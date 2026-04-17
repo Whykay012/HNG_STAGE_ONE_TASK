@@ -34,4 +34,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+    res.send('API is running... Navigate to /api/profiles to see data.');
+});
 app.listen(PORT, () => console.log(`🚀 Wizard Level 1 API on port ${PORT}`));
